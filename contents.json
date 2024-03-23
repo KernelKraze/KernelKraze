@@ -1,0 +1,24 @@
+[
+    {
+      "id": "birthday",
+      "title": "Happy Birthday!",
+      "icon": "CakeIcon",
+      "content": "Wishing you all the happiness and joy on your special day!",
+      "show": false
+    },
+    {
+      "id": "gift",
+      "title": "Special Gift",
+      "icon": "GiftIcon",
+      "content": "A special gift is on its way. Hope it brings a smile to your face!",
+      "show": false
+    },
+    {
+      "id": "celebrate",
+      "title": "Let's Celebrate",
+      "icon": "BalloonsIcon",
+      "content": "It's time to celebrate! Let's make unforgettable memories together.",
+      "show": false
+    }
+  ]
+  
