@@ -51,7 +51,7 @@
   
   <style scoped>
   .download-tor button {
-    background-color: #007BFF;
+    background-color: #e100ff;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -60,7 +60,7 @@
     border-radius: 5px;
   }
   .download-tor button:hover {
-    background-color: #0056b3;
+    background-color: #940494;
   }
   </style>
   
