@@ -1,0 +1,153 @@
+<template>
+  <h1>Welcome!</h1>
+  <div class="about">
+    <p class="read-the-docs">우리와 함께 지식의 바다를 탐험하고, 마음의 멋진 여정을 경험하세요. (웹사이트가 매일 바뀔 수 있어요! 기대해 주세요!)<br>
+      加入我们, 一起探寻知识的海洋, 体验心灵的奇妙旅程.(网站每天可能会变化哦!~,敬请期待吧!)</p>
+      <p class="hint">접속에 문제가 발생한 경우, 잠시 기다리시거나 저희에게 연락해 주세요. <br>
+        如果您遇到任何访问问题, 请稍作等待或联系我们.</p>
+<!-- 访问明网的按钮 -->
+      <!--<button id="redirectButton">访问明网 (公开互联网)</button>-->
+
+<!-- 访问暗网的按钮 -->
+  <p id="onionLink">42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion</p>
+      <button id="redirectButton">访问暗网,或点击上面的链接手动访问 (다크웹에 접속하거나, 위의 링크를 클릭하여 수동으로 접속하세요.)</button>
+      <button id="accessButton">访问我的暗网站点</button>
+      <div id="instruction"></div>
+
+  </div>
+</template>
+<script>
+// document.addEventListener('DOMContentLoaded', (event) => {
+//     const button = document.getElementById('redirectButton');
+//     if (button) {
+//         button.addEventListener('click', function() {
+//             window.location.href = 'http://42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion';
+//         });
+//     }
+// });
+// export default {
+//   name: 'Main',
+//   mounted() {
+//     const onionLinkElement = document.getElementById('onionLink');
+//     if (onionLinkElement) {
+//       onionLinkElement.addEventListener('click', () => {
+//         navigator.clipboard.writeText(onionLinkElement.innerText)
+//           .then(() => {
+//             alert('地址已复制到剪贴板:' + onionLinkElement.innerText);
+//           })
+//           .catch(err => {
+//             console.error('复制到剪贴板失败:', err);
+//           });
+//       });
+//     } else {
+//       null;//console.error('未找到 ID 为 onionLink 的元素');
+//     }
+//   }
+// }
+
+export default {
+  name: 'Main',
+  mounted() {
+    this.addMyButtonClickListener();
+    this.addRedirectButtonClickListener();
+    this.addOnionLinkClickListener();
+    this.setupAccessButton();
+  },
+  methods: {
+    addMyButtonClickListener() {
+      const button = document.getElementById('myButton');
+      if (button) {
+        button.addEventListener('click', this.handleMyButtonClick);
+      } else {
+        console.error('Button element not found!');
+      }
+    },
+    handleMyButtonClick() {
+      console.log('MyButton was clicked!');
+    },
+    addRedirectButtonClickListener() {
+      const button = document.getElementById('redirectButton');
+      if (button) {
+        button.addEventListener('click', () => {
+          window.location.href = 'http://42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion';
+        });
+      } else {
+        console.error('Redirect button not found!');
+      }
+    },
+    addOnionLinkClickListener() {
+      const onionLinkElement = document.getElementById('onionLink');
+      if (onionLinkElement) {
+        onionLinkElement.addEventListener('click', () => {
+          navigator.clipboard.writeText(onionLinkElement.innerText)
+            .then(() => {
+              alert('地址已复制到剪贴板: ' + onionLinkElement.innerText);
+            })
+            .catch(err => {
+              console.error('复制到剪贴板失败:', err);
+            });
+        });
+      } else {
+        console.error('Onion link element not found!');
+      }
+    },
+    setupAccessButton() {
+      const button = document.getElementById('accessButton');
+      if (button) {
+        button.addEventListener('click', this.handleAccessButtonClick);
+      } else {
+        console.error('Access button not found!');
+      }
+    },
+    handleAccessButtonClick() {
+      const ua = navigator.userAgent;
+      const instructionDiv = document.getElementById('instruction');
+      
+      if (/Windows/i.test(ua)) {
+        instructionDiv.innerHTML = "请确保你已安装 Tor Browser, 并<a href='http://42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion'>点击此链接</a>访问我的网站。";
+      } else if (/Android/i.test(ua)) {
+        instructionDiv.innerHTML = "在 Android 设备上，你需要在 Play 商店下载 Tor Browser，并<a href='http://42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion'>点击此链接</a>。";
+      } else if (/Linux/i.test(ua)) {
+        instructionDiv.innerHTML = "在 Linux 上，下载并安装 Tor Browser，然后<a href='http://42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion'>点击此链接</a>。";
+      } else if (/iPhone|iPad|iPod/i.test(ua)) {
+        instructionDiv.innerHTML = "iOS 设备上暂时不支持直接访问 .onion 链接，请在电脑上使用 Tor Browser 访问。";
+      } else {
+        instructionDiv.innerHTML = "请使用适合你设备的方法安装 Tor Browser，然后访问<a href='http://42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion'>我的暗网站点</a>。";
+      }
+    }
+  }
+}
+</script>
+
+<style scoped>
+
+.about {
+  text-align: center;
+  padding: 20px;
+}
+
+
+.github-link {
+  color: #333; /* GitHub颜色 */
+  text-decoration: none; /* 去掉下划线 */
+  font-weight: bold; /* 加粗字体 */
+}
+
+.github-link:hover {
+  color: #0366d6; /* 鼠标悬停时的颜色 */
+  border-radius: 6px;
+}
+
+@keyframes rainbow-animation {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+.read-the-docs {
+  color: #888;
+}
+.hint {
+  color:#fff740;
+}
+
+</style>

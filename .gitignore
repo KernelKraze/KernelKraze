@@ -1,1 +1,3 @@
-/main/
+#/main/
+/main/node_modules
+/main/package-lock.json
