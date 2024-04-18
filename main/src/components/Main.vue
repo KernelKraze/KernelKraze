@@ -5,7 +5,7 @@
     <div class="about">
       <p class="read-the-docs" v-html="getWelcomeText()"></p>
       <p class="hint" v-html="getHelpText()"></p>
-      <p ref="onionLink" @click="copyOnionLink">42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion</p>
+      <p ref="onionLink" @click="copyOnionLink">4f34zolldwh75lheaineh6mcpo64xbg2ix7pxwgdbzouetzxmmvdqsid.onion</p>
       <button @click="handleAccessButtonClick">{{ getDarkWebButtonText() }}</button>
       <div id="instruction"></div>
     </div>
@@ -64,25 +64,25 @@ export default {
       let htmlContent = "";
 
       if (/Windows/i.test(ua)) {
-        htmlContent = this.language === 'zh' ? "请确保你已安装 Tor Browser,点击下方按钮, 使用Tor Browser访问本网站并<a href='http://42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion'>点击此链接</a>访问我的网站." :
-                      this.language === 'ko' ? "Tor Browser가 설치되어 있는지 확인하세요. 아래 버튼을 클릭하여 다운로드하고 설치한 후, Tor Browser로 이 웹사이트를 방문하고 <a href='http://42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion'>이 링크</a>를 클릭하여 내 사이트에 접속하세요." :
-                      "Please make sure you have Tor Browser installed. Click the button below to download and install it, then use Tor Browser to visit this site and <a href='http://42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion'>click this link</a> to access my site.";
+        htmlContent = this.language === 'zh' ? "请确保你已安装 Tor Browser,点击下方按钮, 使用Tor Browser访问本网站并<a href='http://4f34zolldwh75lheaineh6mcpo64xbg2ix7pxwgdbzouetzxmmvdqsid.onion'>点击此链接</a>访问我的网站." :
+                      this.language === 'ko' ? "Tor Browser가 설치되어 있는지 확인하세요. 아래 버튼을 클릭하여 다운로드하고 설치한 후, Tor Browser로 이 웹사이트를 방문하고 <a href='http://4f34zolldwh75lheaineh6mcpo64xbg2ix7pxwgdbzouetzxmmvdqsid.onion'>이 링크</a>를 클릭하여 내 사이트에 접속하세요." :
+                      "Please make sure you have Tor Browser installed. Click the button below to download and install it, then use Tor Browser to visit this site and <a href='http://4f34zolldwh75lheaineh6mcpo64xbg2ix7pxwgdbzouetzxmmvdqsid.onion'>click this link</a> to access my site.";
       } else if (/Android/i.test(ua)) {
-        htmlContent = this.language === 'zh' ? "在 Android 设备上, 你需要下载 Tor Browser,点击下方按钮下载使用TorBrowser访问本网站并<a href='http://42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion'>点击此链接</a>." :
-                      this.language === 'ko' ? "Android 기기에서는 Tor Browser를 다운로드해야 합니다. 아래 버튼을 클릭하여 Tor Browser를 다운로드하고 설치한 후, 이를 사용하여 웹사이트에 접속하고 <a href='http://42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion'>이 링크</a>를 클릭하세요." :
-                      "On Android devices, you need to download Tor Browser. Click the button below to download and use Tor Browser to visit this site and <a href='http://42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion'>click this link</a>.";
+        htmlContent = this.language === 'zh' ? "在 Android 设备上, 你需要下载 Tor Browser,点击下方按钮下载使用TorBrowser访问本网站并<a href='http://4f34zolldwh75lheaineh6mcpo64xbg2ix7pxwgdbzouetzxmmvdqsid.onion'>点击此链接</a>." :
+                      this.language === 'ko' ? "Android 기기에서는 Tor Browser를 다운로드해야 합니다. 아래 버튼을 클릭하여 Tor Browser를 다운로드하고 설치한 후, 이를 사용하여 웹사이트에 접속하고 <a href='http://4f34zolldwh75lheaineh6mcpo64xbg2ix7pxwgdbzouetzxmmvdqsid.onion'>이 링크</a>를 클릭하세요." :
+                      "On Android devices, you need to download Tor Browser. Click the button below to download and use Tor Browser to visit this site and <a href='http://4f34zolldwh75lheaineh6mcpo64xbg2ix7pxwgdbzouetzxmmvdqsid.onion'>click this link</a>.";
       } else if (/Linux/i.test(ua)) {
-        htmlContent = this.language === 'zh' ? "在 Linux 上, 点击下方按钮下载并安装 Tor Browser,使用Tor Browser访问本网站并<a href='http://42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion'>点击此链接</a>." :
-                      this.language === 'ko' ? "Linux에서는 아래 버튼을 클릭하여 Tor Browser를 다운로드하고 설치하세요. 설치 후 Tor Browser를 사용하여 이 웹사이트를 방문하고 <a href='http://42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion'>이 링크</a>를 클릭하세요." :
-                      "On Linux, click the button below to download and install Tor Browser. Use Tor Browser to visit this website and <a href='http://42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion'>click this link</a>.";
+        htmlContent = this.language === 'zh' ? "在 Linux 上, 点击下方按钮下载并安装 Tor Browser,使用Tor Browser访问本网站并<a href='http://4f34zolldwh75lheaineh6mcpo64xbg2ix7pxwgdbzouetzxmmvdqsid.onion'>点击此链接</a>." :
+                      this.language === 'ko' ? "Linux에서는 아래 버튼을 클릭하여 Tor Browser를 다운로드하고 설치하세요. 설치 후 Tor Browser를 사용하여 이 웹사이트를 방문하고 <a href='http://4f34zolldwh75lheaineh6mcpo64xbg2ix7pxwgdbzouetzxmmvdqsid.onion'>이 링크</a>를 클릭하세요." :
+                      "On Linux, click the button below to download and install Tor Browser. Use Tor Browser to visit this website and <a href='http://4f34zolldwh75lheaineh6mcpo64xbg2ix7pxwgdbzouetzxmmvdqsid.onion'>click this link</a>.";
       } else if (/iPhone|iPad|iPod/i.test(ua)) {
-        htmlContent = this.language === 'zh' ? "iOS 设备上暂无官方开发的浏览器, 不过没关系,点击下方按钮下载第三方开发的浏览器, 依旧安全!,下载完毕后使用浏览器访问本网站并<a href='http://42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion'>点击此链接</a>." :
-                      this.language === 'ko' ? "iOS 기기에는 공식적으로 개발된 브라우저가 없습니다만, 걱정하지 마세요. 아래 버튼을 클릭하여 제3자가 개발한 브라우저를 다운로드하세요. 이는 여전히 안전합니다! 다운로드 후 이 브라우저를 사용하여 웹사이트에 접속하고 <a href='http://42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion'>이 링크</a>를 클릭하세요." :
-                      "There is no officially developed browser for iOS devices, but no worries. Click the button below to download a third-party developed browser, which is still safe! After downloading, use the browser to visit this website and <a href='http://42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion'>click this link</a>.";
+        htmlContent = this.language === 'zh' ? "iOS 设备上暂无官方开发的浏览器, 不过没关系,点击下方按钮下载第三方开发的浏览器, 依旧安全!,下载完毕后使用浏览器访问本网站并<a href='http://4f34zolldwh75lheaineh6mcpo64xbg2ix7pxwgdbzouetzxmmvdqsid.onion'>点击此链接</a>." :
+                      this.language === 'ko' ? "iOS 기기에는 공식적으로 개발된 브라우저가 없습니다만, 걱정하지 마세요. 아래 버튼을 클릭하여 제3자가 개발한 브라우저를 다운로드하세요. 이는 여전히 안전합니다! 다운로드 후 이 브라우저를 사용하여 웹사이트에 접속하고 <a href='http://4f34zolldwh75lheaineh6mcpo64xbg2ix7pxwgdbzouetzxmmvdqsid.onion'>이 링크</a>를 클릭하세요." :
+                      "There is no officially developed browser for iOS devices, but no worries. Click the button below to download a third-party developed browser, which is still safe! After downloading, use the browser to visit this website and <a href='http://4f34zolldwh75lheaineh6mcpo64xbg2ix7pxwgdbzouetzxmmvdqsid.onion'>click this link</a>.";
       } else {
-        htmlContent = this.language === 'zh' ? "请使用适合你设备的方法安装 Tor Browser, 点击下方按钮下载并使用Tor Browser访问本网站然后访问<a href='http://42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion'>我的暗网站点</a>." :
-                      this.language === 'ko' ? "장치에 적합한 방법으로 Tor Browser를 설치하세요. 아래 버튼을 클릭하여 다운로드하고 Tor Browser를 사용하여 이 웹사이트에 접속한 다음 <a href='http://42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion'>내 다크웹 사이트</a>를 방문하세요." :
-                      "Please use an appropriate method to install Tor Browser on your device. Click the button below to download and use Tor Browser to access this website and then visit <a href='http://42b6teffdj4djzb4got4bvtiqcnubx32vq7ofmpzrgboqhcwnqhds4ad.onion'>my dark web site</a>.";
+        htmlContent = this.language === 'zh' ? "请使用适合你设备的方法安装 Tor Browser, 点击下方按钮下载并使用Tor Browser访问本网站然后访问<a href='http://4f34zolldwh75lheaineh6mcpo64xbg2ix7pxwgdbzouetzxmmvdqsid.onion'>我的暗网站点</a>." :
+                      this.language === 'ko' ? "장치에 적합한 방법으로 Tor Browser를 설치하세요. 아래 버튼을 클릭하여 다운로드하고 Tor Browser를 사용하여 이 웹사이트에 접속한 다음 <a href='http://4f34zolldwh75lheaineh6mcpo64xbg2ix7pxwgdbzouetzxmmvdqsid.onion'>내 다크웹 사이트</a>를 방문하세요." :
+                      "Please use an appropriate method to install Tor Browser on your device. Click the button below to download and use Tor Browser to access this website and then visit <a href='http://4f34zolldwh75lheaineh6mcpo64xbg2ix7pxwgdbzouetzxmmvdqsid.onion'>my dark web site</a>.";
       }
 
       instructionDiv.innerHTML = htmlContent;
