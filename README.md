@@ -1,4 +1,4 @@
-"你是中国人吗? 快来看看这里吧? [中文版自我介绍](./README_CN.md) 🇨🇳"
+"英文看起来有些隔阂吗? 快来看看这里吧! [中文版自我介绍](./README_CN.md) 🇨🇳"
 
 ## Introduction 🌟
 
@@ -18,7 +18,7 @@ I'm keen on contributing to open-source projects 💡. If you have any suggestio
 
 ### Contact Me 📩
 - GitHub: @KernelKraze
-- Email: xbox17576@gmail.com
+- Email: admin@mail.free-proletariat.dpdns.org
 
 ### Personality and Interests 😊
 - An INTJ personality type, passionate about technology and programming 💖.
